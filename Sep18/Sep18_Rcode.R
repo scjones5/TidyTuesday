@@ -59,7 +59,8 @@ new_Large %>%
     facet_wrap(~ airport_name) + 
     scale_x_continuous(breaks = unique(new_Large$year)) + 
     theme(axis.text.x = element_text(angle = 90, hjust = 1)) + 
-    ylab("Passengers")
+    ylab("Passengers") + 
+    labs(title="Large Airports")
 ggsave(filename = "/Users/sjones/Google Drive/tidyTuesday/Sep18/large_flights.png")
 
 Mslope <- c()
@@ -84,7 +85,8 @@ new_Medium %>%
   facet_wrap(~ airport_name) + 
   scale_x_continuous(breaks = unique(new_Medium$year)) + 
   theme(axis.text.x = element_text(angle = 90, hjust = 1)) + 
-  ylab("Passengers")
+  ylab("Passengers") + 
+  labs(title="Medium Airports")
 ggsave(filename = "/Users/sjones/Google Drive/tidyTuesday/Sep18/med_flights.png")
 
 
@@ -110,5 +112,6 @@ new_Small %>%
   facet_wrap(~ airport_name) + 
   scale_x_continuous(breaks = unique(new_Small$year)) + 
   theme(axis.text.x = element_text(angle = 90, hjust = 1)) + 
-  ylab("Passengers")
+  ylab("Passengers") + 
+  labs(title="Small Airports")
 ggsave(filename = "/Users/sjones/Google Drive/tidyTuesday/Sep18/small_flights.png")
